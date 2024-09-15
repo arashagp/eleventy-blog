@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}{% endblock %}
+    {% include "basehead.html" %}
+</head>
+
+<body class="w-full">
+    <nav
+        class="container mx-auto after:content-['-------------------------------------------------------------------------------------------------------------------------------------------------'] after:mt-2 after:text-white  ">
+        <ul class="flex w-full justify-between">
+            <li>
+                <h2>Agp Blog</h2>
+            </li>
+            <li class="w-1/2">
+                <ul class="flex w-full justify-between">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Archive</a>
+                    </li>
+                    <li>
+                        <a href="/about-me">About Me</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    {{content | safe}}
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
